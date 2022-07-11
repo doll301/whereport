@@ -20,9 +20,7 @@ struct NewAllergensView: View {
     @State var isHalal = false
     @State var isKosher = false
     @State var isGluten = false
-    
-    // TODO: Change color of capsules and text upon selection
-    
+        
     var body: some View {
         VStack(spacing: 20) {
             
@@ -32,27 +30,53 @@ struct NewAllergensView: View {
                 
                 // Add vegan to Person's allergens
                 ZStack {
+                    let fillColor: Color = isVegan ? Color("AccentColor") : Color("BackgroundColor")
+                    let textColor: Color = isVegan ? Color("BackgroundColor") : Color("AccentColor")
+                    
+                    Capsule()
+                        .strokeBorder(Color("AccentColor"), lineWidth: 2)
+                        .background(Capsule().fill(fillColor))
+                        .frame(height: 50)
                     Text("vegan")
                         .font(.title2)
                         .padding()
-                    Capsule()
-                        .stroke(Color("AccentColor"), lineWidth: 2)
-                        .frame(height: 50)
+                        .foregroundColor(textColor)
+                        
                 }.onTapGesture {
-                    newAllergens.append(.vegan)
+                    
+                    // Makes sure the allergen cannot be added twice
+                    if let index = newAllergens.firstIndex(of: .vegan) {
+                        newAllergens.remove(at: index)
+                    } else {
+                        newAllergens.append(.vegan)
+                    }
+                    
                     isVegan = !isVegan
                 }
                 
                 // Add soy-free to Person's allergens
                 ZStack {
+                    let fillColor: Color = isSoy ? Color("AccentColor") : Color("BackgroundColor")
+                    let textColor: Color = isSoy ? Color("BackgroundColor") : Color("AccentColor")
+                    
+                    Capsule()
+                        .strokeBorder(Color("AccentColor"), lineWidth: 2)
+                        .background(Capsule().fill(fillColor))
+                        .frame(height: 50)
                     Text("soy-free")
                         .font(.title2)
                         .padding()
-                    Capsule()
-                        .stroke(Color("AccentColor"), lineWidth: 2)
-                        .frame(height: 50)
+                        .foregroundColor(textColor)
+                    
                 }.onTapGesture {
-                    newAllergens.append(.soy)
+                    
+                    // Makes sure the allergen cannot be added twice
+                    if let index = newAllergens.firstIndex(of: .soy) {
+                        newAllergens.remove(at: index)
+                    } else {
+                        newAllergens.append(.soy)
+                    }
+                    
                     isSoy = !isSoy
                 }
             }
@@ -61,14 +85,27 @@ struct NewAllergensView: View {
             
             // Add lactose-intolerance to Person's allergens
             ZStack {
-                Text("lactose-intolerance")
+                let fillColor: Color = isLactose ? Color("AccentColor") : Color("BackgroundColor")
+                let textColor: Color = isLactose ? Color("BackgroundColor") : Color("AccentColor")
+                
+                Capsule()
+                    .strokeBorder(Color("AccentColor"), lineWidth: 2)
+                    .background(Capsule().fill(fillColor))
+                    .frame(height: 50)
+                Text("lactose-intolerant")
                     .font(.title2)
                     .padding()
-                Capsule()
-                    .stroke(Color("AccentColor"), lineWidth: 2)
-                    .frame(height: 50)
+                    .foregroundColor(textColor)
+                
             }.onTapGesture {
-                newAllergens.append(.lactose)
+                
+                // Makes sure the allergen cannot be added twice
+                if let index = newAllergens.firstIndex(of: .lactose) {
+                    newAllergens.remove(at: index)
+                } else {
+                    newAllergens.append(.lactose)
+                }
+                
                 isLactose = !isLactose
             }
             
@@ -76,27 +113,53 @@ struct NewAllergensView: View {
                 
                 // Add vegetarian to Person's allergens
                 ZStack {
+                    let fillColor: Color = isVegetarian ? Color("AccentColor") : Color("BackgroundColor")
+                    let textColor: Color = isVegetarian ? Color("BackgroundColor") : Color("AccentColor")
+                    
+                    Capsule()
+                        .strokeBorder(Color("AccentColor"), lineWidth: 2)
+                        .background(Capsule().fill(fillColor))
+                        .frame(height: 50)
                     Text("vegetarian")
                         .font(.title2)
                         .padding()
-                    Capsule()
-                        .stroke(Color("AccentColor"), lineWidth: 2)
-                        .frame(height: 50)
+                        .foregroundColor(textColor)
+                    
                 }.onTapGesture {
-                    newAllergens.append(.vegetarian)
+                    
+                    // Makes sure the allergen cannot be added twice
+                    if let index = newAllergens.firstIndex(of: .vegetarian) {
+                        newAllergens.remove(at: index)
+                    } else {
+                        newAllergens.append(.vegetarian)
+                    }
+                    
                     isVegetarian = !isVegetarian
                 }
                 
                 // Add soy-free to Person's allergens
                 ZStack {
+                    let fillColor: Color = isHalal ? Color("AccentColor") : Color("BackgroundColor")
+                    let textColor: Color = isHalal ? Color("BackgroundColor") : Color("AccentColor")
+                    
+                    Capsule()
+                        .strokeBorder(Color("AccentColor"), lineWidth: 2)
+                        .background(Capsule().fill(fillColor))
+                        .frame(height: 50)
                     Text("halal")
                         .font(.title2)
                         .padding()
-                    Capsule()
-                        .stroke(Color("AccentColor"), lineWidth: 2)
-                        .frame(height: 50)
+                        .foregroundColor(textColor)
+                    
                 }.onTapGesture {
-                    newAllergens.append(.halal)
+                    
+                    // Makes sure the allergen cannot be added twice
+                    if let index = newAllergens.firstIndex(of: .halal) {
+                        newAllergens.remove(at: index)
+                    } else {
+                        newAllergens.append(.halal)
+                    }
+                    
                     isHalal = !isHalal
                 }
             }
@@ -105,27 +168,53 @@ struct NewAllergensView: View {
                 
                 // Add vegetarian to Person's allergens
                 ZStack {
+                    let fillColor: Color = isKosher ? Color("AccentColor") : Color("BackgroundColor")
+                    let textColor: Color = isKosher ? Color("BackgroundColor") : Color("AccentColor")
+                    
+                    Capsule()
+                        .strokeBorder(Color("AccentColor"), lineWidth: 2)
+                        .background(Capsule().fill(fillColor))
+                        .frame(height: 50)
                     Text("kosher")
                         .font(.title2)
                         .padding()
-                    Capsule()
-                        .stroke(Color("AccentColor"), lineWidth: 2)
-                        .frame(height: 50)
+                        .foregroundColor(textColor)
+                    
                 }.onTapGesture {
-                    newAllergens.append(.kosher)
+                    
+                    // Makes sure the allergen cannot be added twice
+                    if let index = newAllergens.firstIndex(of: .kosher) {
+                        newAllergens.remove(at: index)
+                    } else {
+                        newAllergens.append(.kosher)
+                    }
+                    
                     isKosher = !isKosher
                 }
                 
                 // Add soy-free to Person's allergens
                 ZStack {
+                    let fillColor: Color = isGluten ? Color("AccentColor") : Color("BackgroundColor")
+                    let textColor: Color = isGluten ? Color("BackgroundColor") : Color("AccentColor")
+                    
+                    Capsule()
+                        .strokeBorder(Color("AccentColor"), lineWidth: 2)
+                        .background(Capsule().fill(fillColor))
+                        .frame(height: 50)
                     Text("gluten-free")
                         .font(.title2)
                         .padding()
-                    Capsule()
-                        .stroke(Color("AccentColor"), lineWidth: 2)
-                        .frame(height: 50)
+                        .foregroundColor(textColor)
+                    
                 }.onTapGesture {
-                    newAllergens.append(.gluten)
+                    
+                    // Makes sure the allergen cannot be added twice
+                    if let index = newAllergens.firstIndex(of: .gluten) {
+                        newAllergens.remove(at: index)
+                    } else {
+                        newAllergens.append(.gluten)
+                    }
+                    
                     isGluten = !isGluten
                 }
             }
