@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject var person: Person
     
     var body: some View {
         ZStack {
             Color("Background").edgesIgnoringSafeArea(.all)
             NavigationView {
                 if viewModel.signedIn {
-                    DashboardView()
+                    if person.isNewUser {
+                        NewAllergensView()
+                    } else {
+                        DashboardView()
+                    }
                 } else {
                     OpeningScreenView()
                 }

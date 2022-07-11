@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DA7F4FD287BB83C00091704 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7F4FC287BB83C00091704 /* Person.swift */; };
+		4DA7F4FF287BBA4B00091704 /* Allergen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7F4FE287BBA4B00091704 /* Allergen.swift */; };
+		4DA7F501287BBCC400091704 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7F500287BBCC400091704 /* Airport.swift */; };
+		4DA7F503287BCEBB00091704 /* NewAllergensView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7F502287BCEBB00091704 /* NewAllergensView.swift */; };
 		4DD2C90F2877ADB0004997DD /* LoginFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2C90E2877ADB0004997DD /* LoginFieldView.swift */; };
 		4DD2C9122877ADFE004997DD /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2C9112877ADFE004997DD /* AppViewModel.swift */; };
 		4DD2C9142877AF07004997DD /* SignUpFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2C9132877AF07004997DD /* SignUpFieldView.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DA7F4FC287BB83C00091704 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		4DA7F4FE287BBA4B00091704 /* Allergen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergen.swift; sourceTree = "<group>"; };
+		4DA7F500287BBCC400091704 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		4DA7F502287BCEBB00091704 /* NewAllergensView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAllergensView.swift; sourceTree = "<group>"; };
 		4DD2C90E2877ADB0004997DD /* LoginFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFieldView.swift; sourceTree = "<group>"; };
 		4DD2C9112877ADFE004997DD /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		4DD2C9132877AF07004997DD /* SignUpFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldView.swift; sourceTree = "<group>"; };
@@ -65,6 +73,7 @@
 				4DD2C9132877AF07004997DD /* SignUpFieldView.swift */,
 				4DD2C9152877B4D5004997DD /* OpeningScreenView.swift */,
 				4DD2C9172877B52A004997DD /* DashboardView.swift */,
+				4DA7F502287BCEBB00091704 /* NewAllergensView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -73,6 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				4DD2C9112877ADFE004997DD /* AppViewModel.swift */,
+				4DA7F4FC287BB83C00091704 /* Person.swift */,
+				4DA7F4FE287BBA4B00091704 /* Allergen.swift */,
+				4DA7F500287BBCC400091704 /* Airport.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -245,7 +257,11 @@
 				4DF3D7B02876470D00DD07ED /* ContentView.swift in Sources */,
 				4DD2C9182877B52A004997DD /* DashboardView.swift in Sources */,
 				4DD2C9122877ADFE004997DD /* AppViewModel.swift in Sources */,
+				4DA7F501287BBCC400091704 /* Airport.swift in Sources */,
+				4DA7F503287BCEBB00091704 /* NewAllergensView.swift in Sources */,
 				4DF3D7AE2876470D00DD07ED /* WhereportApp.swift in Sources */,
+				4DA7F4FD287BB83C00091704 /* Person.swift in Sources */,
+				4DA7F4FF287BBA4B00091704 /* Allergen.swift in Sources */,
 				4DD2C9162877B4D5004997DD /* OpeningScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

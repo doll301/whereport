@@ -19,12 +19,9 @@ struct SignUpFieldView: View {
     
     var body: some View {
         
-        VStack {
+        VStack(spacing: 20) {
             
             Text("Sign Up for an Account").font(.largeTitle).padding().frame(width: 400, height: 100, alignment: .center).multilineTextAlignment(.center)
-            
-            Spacer().frame(height: 100)
-            
 
             
             ZStack {
@@ -126,7 +123,7 @@ struct SignUpFieldView: View {
                         .stroke(Color("AccentColor"), lineWidth: 2)
                         .frame(width: 175, height: 65)
                 }
-            })   
+            }).padding(20)
         }
     }
 }

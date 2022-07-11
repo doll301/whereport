@@ -17,7 +17,7 @@ struct WhereportApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(AppViewModel())
+            ContentView().environmentObject(AppViewModel()).environmentObject(Person())
         }
     }
 }
